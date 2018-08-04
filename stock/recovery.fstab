@@ -1,0 +1,13 @@
+/cache            ext4       /dev/block/platform/msm_sdcc.1/by-name/cache
+/system           ext4       /dev/block/platform/msm_sdcc.1/by-name/system
+/data             ext4       /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=encryptable=footer
+/boot             emmc       /dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery         emmc       /dev/block/platform/msm_sdcc.1/by-name/recovery
+/modem			  vfat       /dev/block/platform/msm_sdcc.1/by-name/modem		flags=display="Modem";backup=1
+/fsg			  emmc       /dev/block/platform/msm_sdcc.1/by-name/fsg			flags=display="fsg";backup=1
+/modemst1         emmc       /dev/block/platform/msm_sdcc.1/by-name/modemst1	flags=display="modemst1";backup=1
+/modemst2         emmc       /dev/block/platform/msm_sdcc.1/by-name/modemst2	flags=display="modemst2";backup=1
+/persist		  ext4		 /dev/block/platform/msm_sdcc.1/by-name/persist		flags=display="Persist";backup=1
+
+/external_sd      vfat       /dev/block/mmcblk1p1                               flags=display="External SD";storage;wipeingui;removable
+/usb-otg          vfat       /dev/block/sda1 /dev/block/sda                     flags=display="USB OTG";storage;wipeingui;removable
