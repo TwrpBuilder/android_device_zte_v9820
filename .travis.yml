@@ -9,18 +9,18 @@ before_script:
     -O $HOME/twrp.tar.xz
   - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_zte_zte_v9820.git device/zte/zte_v9820
+  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_zte_v9820.git device/zte/v9820
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery --depth=1
   - |
     docker run --rm -i -v "$(pwd):/root/twrp/:rw,z" surendrajat/twrp-builder bash << EOF
     cd /root/twrp/
-    source build/envsetup.sh && lunch omni_zte_v9820-eng && make -j16 recoveryimage
+    source build/envsetup.sh && lunch omni_v9820-eng && make -j16 recoveryimage
     exit
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/zte_v9820/recovery.img $HOME/twrp/TWRP-$version-zte_v9820-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/v9820/recovery.img $HOME/twrp/TWRP-$version-v9820-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
@@ -30,7 +30,7 @@ deploy:
   file: $HOME/twrp/*.img
   on:
     tags: false
-    repo: TwrpBuilder/android_device_zte_zte_v9820
+    repo: TwrpBuilder/android_device_zte_v9820
     branch: master
 branches:
   except:

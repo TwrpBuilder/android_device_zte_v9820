@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter zte_v9820,$(TARGET_DEVICE)),)
+ifneq ($(filter v9820,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/zte/zte_v9820/
+LOCAL_PATH := device/zte/v9820/
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/zte/zte_v9820/
+LOCAL_PATH := device/zte/v9820/
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_zte_v9820.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_v9820.mk

@@ -15,8 +15,8 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-PRODUCT_DEVICE := zte_v9820
-PRODUCT_NAME := omni_zte_v9820
+PRODUCT_DEVICE := v9820
+PRODUCT_NAME := omni_v9820
 PRODUCT_BRAND := zte
 PRODUCT_MODEL := ZTE V9820
 PRODUCT_MANUFACTURER := zte

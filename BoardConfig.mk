@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/zte/zte_v9820
+LOCAL_PATH := device/zte/v9820
 
 TARGET_BOARD_PLATFORM := msm8226
-TARGET_BOOTLOADER_BOARD_NAME := zte_v9820
+TARGET_BOOTLOADER_BOARD_NAME := v9820
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
